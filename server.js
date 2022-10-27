@@ -16,7 +16,7 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log("database connected"))
 let isLoggedIn = 0;
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 3001
 app.get('/credential',async (req,res) => {
     // console.log(req.query.username)
     try {
