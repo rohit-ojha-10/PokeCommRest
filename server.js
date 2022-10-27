@@ -16,7 +16,9 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log("database connected"))
 let isLoggedIn = 0;
-
+app.listen(process.env.PORT || 3001, () => {
+    console.log(process.env.PORT || 3001)
+})
 app.get('/',async (req,res) => {
     // console.log(req.query.username)
     try {
@@ -68,7 +70,4 @@ app.post('/credential',async (req,res) => {
 app.delete('/deleteAll',async (req,res) => {
     await credentialModel.deleteMany({})
     res.send("deleted")
-})
-app.listen(process.env.PORT || 3001, () => {
-    console.log(process.env.PORT || 3001)
 })
