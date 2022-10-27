@@ -1,4 +1,4 @@
-GET http://localhost:3001/credential
+GET https://gentle-oasis-71528.herokuapp.com/credential
 
 ###
 
