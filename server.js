@@ -19,7 +19,7 @@ let isLoggedIn = 0;
 app.listen(process.env.PORT || 3001, () => {
     console.log(process.env.PORT || 3001)
 })
-app.get('/',async (req,res) => {
+app.get('/credential',async (req,res) => {
     // console.log(req.query.username)
     try {
         const data = await Creds.find()
