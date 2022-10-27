@@ -70,5 +70,5 @@ app.delete('/deleteAll',async (req,res) => {
     res.send("deleted")
 })
 app.listen(process.env.PORT || 3001, () => {
-    console.log(PORT)
+    console.log(process.env.PORT || 3001)
 })
