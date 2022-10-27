@@ -1,0 +1,16 @@
+GET http://localhost:3001/credential
+
+###
+
+POST http://localhost:3001/credential
+Content-Type: application/json
+
+{
+    "name" : "ndadadnnn",
+    "username" : "sdsadasl",
+    "password" : "88"
+}
+
+###
+
+DELETE  http://localhost:3001/deleteAll
